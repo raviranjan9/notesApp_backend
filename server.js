@@ -18,12 +18,13 @@ app.use(userRouter);
 app.use(noteRouter);
 
 const URL = process.env.DB;
+const PORT = process.env.PORT || 8000;
 
 mongoose.connect(URL, {useNewUrlParser: true, useUnifiedTopology: true});
 
-app.listen(process.env.PORT, (err) => {
+app.listen(PORT, (err) => {
     if(err)
         console.log(err);
     else
-        console.log(`Server is listening at Port: ${process.env.PORT}`);
+        console.log(`Server is listening at Port: ${PORT}`);
 });
