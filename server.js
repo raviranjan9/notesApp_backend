@@ -7,7 +7,11 @@ const cors = require('cors');
 const app = express();
 dotenv.config({path: './config.env'});
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:3000", 
+    method: ["GET", "POST", "PUT", "PATCH", "DELETE"]
+}));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
