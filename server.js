@@ -8,7 +8,7 @@ const app = express();
 dotenv.config({path: './config.env'});
 
 app.use(cors({
-    origin: "http://localhost:3000", 
+    origin: "https://notes-app12.netlify.app/", 
     method: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }));
 
