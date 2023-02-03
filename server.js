@@ -8,8 +8,8 @@ const app = express();
 dotenv.config({path: './config.env'});
 
 app.use(cors({
-    origin: "https://notes-app12.netlify.app/", 
-    method: ["GET", "POST", "PUT", "PATCH", "DELETE"]
+    // origin: "https://notes-app12.netlify.app/", 
+    // method: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }));
 
 app.use(bodyParser.json());
